@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">Developer ROI Calculator</p>
+      <h1>How much is integration work costing you?</h1>
+    </header>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="field">
+          <label for="company">Your company / organization</label>
+          <input type="text" id="company" placeholder="e.g. Acme Ltd">
+        </div>
+
+        <div class="field">
+          <label for="industry">Industry</label>
+          <select id="industry">
+            <option value="business">Business Services</option>
+            <option value="finance">Finance</option>
+            <option value="health">Healthcare</option>
+            <option value="retail">Retail</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="developers">Developer count</label>
+          <input type="number" id="developers" value="10" min="1">
+        </div>
+
+        <div class="field">
+          <label for="timeShare">% of time spent on integration work</label>
+          <div class="slider-row">
+            <input type="range" id="timeShare" min="0" max="100" value="40">
+            <output id="timeShareValue">40%</output>
+          </div>
+        </div>
+        <button id="calculate">Calculate ROI</button>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="donut" id="donut">
+          <div class="donut-center">
+            <strong id="total">$209k</strong>
+            <span>Annual value</span>
+          </div>
+        </div>
+
+        <ul class="legend">
+          <li><span class="dot dot1"></span>Creation &amp; maintenance<b id="val-creation">$60,000</b></li>
+<li><span class="dot dot2"></span>Faster testing<b id="val-testing">$25,000</b></li>
+<li><span class="dot dot3"></span>Reduced complexity<b id="val-complexity">$75,000</b></li>
+<li><span class="dot dot4"></span>Lower risk<b id="val-risk">$49,000</b></li>  
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+                                                                                                    </html>
