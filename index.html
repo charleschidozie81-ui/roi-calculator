@@ -3,67 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROI Calculator</title>
+  <title>ROI calculator for small business in nigeria</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <header class="intro">
-      <p class="eyebrow">Developer ROI Calculator</p>
-      <h1>How much is integration work costing you?</h1>
-    </header>
+  <h1>Solar ROI Calculator For Small Business</h1>
+  <p>All amounts are in naira.</p>
 
-    <div class="layout">
-      <section class="panel">
-        <div class="field">
-          <label for="company">Your company / organization</label>
-          <input type="text" id="company" placeholder="e.g. Acme Ltd">
-        </div>
+<div class="field">
+  <label for="systemCost">Cost of the solar system (₦)</label>
+  <input type="number" id="systemCost" min="0" placeholder="e.g. 900000">
+</div>
+  <div class="field">
+  <label for="installCost">Installation and other one-off costs (₦)</label>
+  <input type="number" id="installCost" min="0" placeholder="e.g. 100000">
+  </div>
+  <div class="field">
+  <label for="runningCost">Running cost per month (₦)</label>
+  <input type="number" id="runningCost" min="0" placeholder="e.g. 20000">
+  </div>
+  <div class="field">
+  <label for="monthlySaving">Money saved each month (₦)</label>
+  <input type="number" id="monthlySaving" min="0" placeholder="e.g. 240000">
+  </div>
 
-        <div class="field">
-          <label for="industry">Industry</label>
-          <select id="industry">
-            <option value="business">Business Services</option>
-            <option value="finance">Finance</option>
-            <option value="health">Healthcare</option>
-            <option value="retail">Retail</option>
-          </select>
-        </div>
+  <div class="field">
+  <label for="months">Months to measure over</label>
+  <select id="months">
+    <option value="12">12 months</option>
+    <option value="24" selected>24 months</option>
+    <option value="36">36 months</option>
+  </select>
+</div>
 
-        <div class="field">
-          <label for="developers">Developer count</label>
-          <input type="number" id="developers" value="10" min="1">
-        </div>
+<button id="calculateBtn">Check my payback</button>
 
-        <div class="field">
-          <label for="timeShare">% of time spent on integration work</label>
-          <div class="slider-row">
-            <input type="range" id="timeShare" min="0" max="100" value="40">
-            <output id="timeShareValue">40%</output>
-          </div>
-        </div>
-        <button id="calculate">Calculate ROI</button>
-        <p id="message" class="message"></p>
-      </section>
+<p id="errorMessage"></p>
 
-      <section class="panel result-panel">
-        <div class="donut" id="donut">
-          <div class="donut-center">
-            <strong id="total">$209k</strong>
-            <span>Annual value</span>
-          </div>
-        </div>
+<div class="results">
+  <p>Total cost: <strong id="totalCost"></strong></p>
+  <p>Total benefit: <strong id="totalBenefit"></strong></p>
+  <p>Net gain: <strong id="netGain"></strong></p>
+  <p>ROI: <strong id="roiResult"></strong></p>
+  <p>Payback: <strong id="paybackResult"></strong></p>
+</div>
 
-        <ul class="legend">
-          <li><span class="dot dot1"></span>Creation &amp; maintenance<b id="val-creation">$60,000</b></li>
-<li><span class="dot dot2"></span>Faster testing<b id="val-testing">$25,000</b></li>
-<li><span class="dot dot3"></span>Reduced complexity<b id="val-complexity">$75,000</b></li>
-<li><span class="dot dot4"></span>Lower risk<b id="val-risk">$49,000</b></li>  
-        </ul>
-      </section>
-    </div>
-  </main>
+<p id="verdictText"></p>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+  
+
+
+
+
+  
 </body>
-                                                                                                    </html>
+</html>
