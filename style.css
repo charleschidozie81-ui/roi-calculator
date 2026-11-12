@@ -1,18 +1,9 @@
 :root {
-  --bg: #faf6ef;
-  --panel: #ffffff;
-  --text: #1f2a24;
-  --muted: #6b7280;
-  --line: #e6dfd1;
-  --accent: #1f6f54;
-  --accent-dark: #17543f;
-
-  /* donut and legend colors */
-  --c1: #1f6f54;
-  --c2: #e9a23b;
-  --c3: #e4572e;
-  --c4: #3a86a8;
-  --track: #e6dfd1;
+  --blue: #0b3d91;
+  --orange: #e65c00;
+  --cream: #fff8ee;
+  --text: #1f2937;
+  --red: #c0392b;
 }
 
 * {
@@ -20,198 +11,82 @@
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, Arial, sans-serif;
-  background: var(--bg);
+  font-family: Arial, sans-serif;
+  background-color: var(--cream);
   color: var(--text);
-}
-
-.page {
-  max-width: 960px;
+  padding: 16px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 28px 16px 48px;
 }
-
-.intro {
-  margin-bottom: 28px;
-}
-
-.eyebrow {
-  margin: 0 0 8px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
 h1 {
-  margin: 0;
-  font-family: Georgia, serif;
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-.layout {
-  display: grid;
-  gap: 20px;
-}
-
-.panel {
-  background: var(--panel);
-  border: 2px solid var(--line);
-  border-radius: 24px;
-  padding: 24px;
+  color: var(--blue);
+  font-size: 28px;
+  text-align: center;
 }
 
 .field {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: 6px;
   font-weight: bold;
-  color: var(--text);
-}
+  }
 
-input[type="text"],
-input[type="number"],
-select {
+input,select {
   width: 100%;
-  padding: 13px;
+  padding: 12px;
   font-size: 16px;
-  color: var(--text);
-  background: #fdfbf7;
-  border: 2px solid var(--line);
-  border-radius: 12px;
-}
-
-input:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.slider-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.slider-row input {
-  flex: 1;
-  accent-color: var(--accent);
-}
-
-output {
-  min-width: 56px;
-  padding: 6px 8px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  background: #f1ece1;
+  border: 2px solid var(--blue);
   border-radius: 8px;
-}
+  }
 
 button {
   width: 100%;
-  padding: 15px;
-  font-size: 16px;
+  padding: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
-  background: var(--accent);
+  background-color: var(--orange);
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-button:active {
-  background: var(--accent-dark);
+#errorMessage	{
+color: var(--red);
+  }
+
+.results {
+  background-color: white;
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
 }
 
-.result-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+#verdictText {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 16px;
+  }
 
-.donut {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  margin: 8px 0 28px;
-  border-radius: 50%;
-  background: var(--track);
-}
-
-.donut-center {
-  position: absolute;
-  inset: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--panel);
-}
-
-.donut-center strong {
-  font-family: Georgia, serif;
-  font-size: 30px;
-}
-
-.donut-center span {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.legend {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.legend li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 0;
-  font-size: 14px;
-  border-bottom: 1px dashed var(--line);
-}
-
-.legend li:last-child {
-  border-bottom: none;
-}
-
-.legend b {
-  margin-left: auto;
-}
-
-.dot {
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-}
-
-.dot1 { background: var(--c1); }
-.dot2 { background: var(--c2); }
-.dot3 { background: var(--c3); }
-.dot4 { background: var(--c4); }
-
-@media (min-width: 760px) {
-  .layout {
-    grid-template-columns: 1.1fr 0.9fr;
+@media (min-width: 700px) {
+  h1 {
+    font-size: 36px;
   }
 }
-.message {
-  min-height: 20px;
-  margin: 12px 0 0;
-  font-size: 14px;
-  text-align: center;
-  color: var(--c3);
+
+.good {
+  color: #1e7e34;
+}
+
+.okay {
+  color: var(--orange);
+}
+
+.slow {
+  color: var(--red);
 }
